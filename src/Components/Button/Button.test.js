@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Button from ".";
 
@@ -10,7 +10,5 @@ describe("Button", () => {
     expect(button).not.toHaveFocus();
     userEvent.click(getByRole("button"));
     expect(button).toHaveFocus();
-
-    
   });
 });
