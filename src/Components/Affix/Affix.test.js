@@ -6,7 +6,6 @@ import Button from "../Button";
 
 describe("Affix", () => {
   test("interaction with affix component", () => {
-   
     const { getByText, getByTestId } = render(
       <Affix type="affix">
         <div>
@@ -18,6 +17,5 @@ describe("Affix", () => {
 
     expect(affixButton).not.toHaveFocus();
     userEvent.click(affixButton);
- 
   });
 });

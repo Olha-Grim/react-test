@@ -14,7 +14,7 @@ import { Avatar as AntdAvatar } from "antd";
  * @prop {() => boolean} onError
  * @prop {string} className
  * @prop {JSX.Element} children
- * @returns {JSX.Element}
+ * @return {JSX.Element}
  * @constructor
  */
 
