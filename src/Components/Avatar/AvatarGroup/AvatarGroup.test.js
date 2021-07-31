@@ -27,9 +27,6 @@ describe("Avatar", () => {
     const avatarHover = queryAllByRole("img");
 
     userEvent.hover(avatar);
-    expect(avatarHover).toBe();
-
-    fireEvent.mouseOut(avatar);
-    expect(avatarHover).toBeFalsy();
+    expect(avatarHover).toHaveLength(2);
   });
 });

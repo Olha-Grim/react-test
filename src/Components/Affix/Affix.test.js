@@ -6,7 +6,7 @@ import Button from "../Button";
 
 describe("Affix", () => {
   test("interaction with affix component", () => {
-    const { getByText, getByTestId } = render(
+    const { getByText } = render(
       <Affix type="affix">
         <div>
           <Button type="primary">Affix top</Button>
