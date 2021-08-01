@@ -1,10 +1,12 @@
 import React from "react";
-import {  Select as AntdSelect } from "antd";
-import { OptionData, OptionGroupData, OptionsType } from "rc-select/lib/interface";
-import { FilterFunc , OnClear} from "rc-select/lib/interface/generator";
+import { Select as AntdSelect } from "antd";
+import {
+  OptionData,
+  OptionGroupData,
+  OptionsType,
+} from "rc-select/lib/interface";
+import { FilterFunc, OnClear } from "rc-select/lib/interface/generator";
 import { LabeledValue } from "antd/es/select";
-
-
 
 /**
  *
@@ -68,7 +70,6 @@ import { LabeledValue } from "antd/es/select";
 /**
  * @param {Props} props
  */
-
 
 const Select = ({
   allowClear,

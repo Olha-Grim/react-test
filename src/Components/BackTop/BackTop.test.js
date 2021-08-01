@@ -5,12 +5,13 @@ import BackTop from ".";
 
 describe("BackTop", () => {
   test("interaction with BackTop component", () => {
-    const { container } = render(<BackTop />);
-    screen.debug();
-  });
+    const { getByText } = render(<BackTop  />);
+    // screen.debug();
 
-//   const avatar = ;
-//   const button = document.querySelector('ant-back-top')
-  screen.debug()
-//   console.log(button)
+    // const button = getByRole("button");
+    // console.log(button);
+    // expect(button).toBeVisible();
+
+    // screen.debug();
+  });
 });
