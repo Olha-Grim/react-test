@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import {Select, SelectOptGroup, SelectOption} from "../index";
+import { Select, SelectOptGroup, SelectOption } from "../index";
 
 describe("Select", () => {
   test("interaction with Select component", () => {
