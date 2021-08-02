@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackTop interaction with BackTop component 1`] = `
+<DocumentFragment>
+  <div
+    class="ant-back-top"
+  />
+</DocumentFragment>
+`;
