@@ -2,7 +2,7 @@ import React from "react";
 import { Badge as AntdBadge } from "antd";
 
 /**
- * 
+ *
  * @typedef Props
  * @prop {string} color
  * @prop {React.ReactNode | number} count

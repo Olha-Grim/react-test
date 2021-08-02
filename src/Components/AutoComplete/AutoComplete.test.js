@@ -8,8 +8,7 @@ import AutoComplete from ".";
 
 describe("AutoComplete", () => {
   test("that autocomplete works", async () => {
-    // const { getByTestId, getByRole, queryByRole } = render(<AutoComplete />, {});
-
+    const { getByTestId, getByRole, queryByRole } = render(<AutoComplete />, {});
 
     // const autoCompleteSearch = getByTestId("ant-select-auto-complete");
 

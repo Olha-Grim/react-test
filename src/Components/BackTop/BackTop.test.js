@@ -5,7 +5,7 @@ import BackTop from ".";
 
 describe("BackTop", () => {
   test("interaction with BackTop component", () => {
-    const { getByText } = render(<BackTop  />);
+    const { getByText } = render(<BackTop />);
     // screen.debug();
 
     // const button = getByRole("button");
