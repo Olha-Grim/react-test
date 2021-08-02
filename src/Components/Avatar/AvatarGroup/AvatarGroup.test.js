@@ -5,7 +5,7 @@ import AvatarGroup from ".";
 import Avatar from "../Avatar";
 import userEvent from "@testing-library/user-event";
 
-describe("Avatar", () => {
+describe("Avatar Group", () => {
   window.matchMedia =
     window.matchMedia ||
     function () {
@@ -15,7 +15,7 @@ describe("Avatar", () => {
         removeListener: function () {},
       };
     };
-  test("interaction with avatar component", () => {
+  test("interaction with avatar group component", () => {
     const { container, queryAllByRole } = render(
       <AvatarGroup>
         <Avatar size="large" icon={<UserOutlined />} type="avatar" />
