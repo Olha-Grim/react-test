@@ -1,15 +1,11 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
 import { Card, CardMeta } from ".";
 import { Avatar } from "../Avatar";
+import { EditOutlined, SettingOutlined } from "@ant-design/icons";
 
-describe("Button", () => {
+describe("Card", () => {
   window.matchMedia =
     window.matchMedia ||
     function () {
@@ -19,7 +15,7 @@ describe("Button", () => {
         removeListener: function () {},
       };
     };
-  test("interaction with input", () => {
+  test("interaction with Card", () => {
     const { getByRole, getByAltText, getByLabelText, getByText } = render(
       <>
         <Card
@@ -47,16 +43,17 @@ describe("Button", () => {
     );
 
     const imgExample = getByAltText("example");
-    const imgSetting = getByLabelText("setting");
-    const imgEdit = getByLabelText("edit");
-    console.log(imgEdit, "imgEdit");
-
-    const card = getByText(/Card title/i);
+    const avatar = getByText(/Card title/i);
     expect(imgExample).toBeInTheDocument();
-    expect(card).toBeInTheDocument();
+    expect(avatar).toBeInTheDocument();
 
-    userEvent.click(getByLabelText("setting"));
-    userEvent.click(getByLabelText("edit"));
+    const buttonSetting = getByLabelText("setting");
+    // .img.node.prop.alt("setting");
+    // console.log(Object.keys(buttonSetting), "setting");
+
+    const buttonEdit = getByLabelText("edit");
+    userEvent.click(buttonSetting);
+    userEvent.click(buttonEdit);
 
     // expect(getByLabelText("setting")).toHaveFocus();
     // expect(getByLabelText("edit")).toHaveFocus();
@@ -64,10 +61,6 @@ describe("Button", () => {
     // expect(getByLabelText("setting")).toHaveFocus();
     // expect(imgEdit).toHaveFocus();
 
-    // expect(imgExample).toBeInTheDocument()
-    // console.log(imgSecond);
-    // const [] = getByAll
-
-    screen.debug();
+    // screen.debug();
   });
 });

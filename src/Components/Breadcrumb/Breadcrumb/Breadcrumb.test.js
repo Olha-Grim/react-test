@@ -7,25 +7,18 @@ import Separator from "../Separator";
 
 describe("Breadcrumb", () => {
   test("interaction with Breadcrumb component", () => {
-    const { getByText, getByRole, container } = render(
-      <Breadcrumb separator="">
-        <BreadcrumbItem>Location</BreadcrumbItem>
-        <Separator>:</Separator>
-        <BreadcrumbItem href="">Application Center</BreadcrumbItem>
-        <Separator />
-        <BreadcrumbItem href="">Application List</BreadcrumbItem>
-        <Separator />
-        <BreadcrumbItem>An Application</BreadcrumbItem>
-      </Breadcrumb>
-    );
-
-    // const breadcrumb = container.firstChild();
-    // console.log(breadcrumb, "breadcrumb");
-    // img.setAttribute("data-src", img200);
-    // expect(img).toHaveAttributeValue("src", img200);
-    // const separator;
-    // const separator;
-
-    // screen.debug();
+    // const { getByText } = render(
+    //   <Breadcrumb separator="">
+    //     <BreadcrumbItem href="">Application Center</BreadcrumbItem>
+    //     <Separator />
+    //     <BreadcrumbItem href="">Application List</BreadcrumbItem>
+    //   </Breadcrumb>
+    // );
+    // const firstLink = getByText("Application Center");
+    // const secondLink = getByText("Application List");
+    // userEvent.click(firstLink);
+    // expect(firstLink).toHaveFocus();
+    // userEvent.click(secondLink);
+    // expect(secondLink).toHaveFocus();
   });
 });

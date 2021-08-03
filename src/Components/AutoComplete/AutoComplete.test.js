@@ -7,16 +7,24 @@ import { act } from "react-dom/test-utils";
 import AutoComplete from ".";
 
 describe("AutoComplete", () => {
+  window.matchMedia =
+    window.matchMedia ||
+    function () {
+      return {
+        matches: false,
+        addListener: function () {},
+        removeListener: function () {},
+      };
+    };
   test("that autocomplete works", async () => {
-    const { getByTestId, getByRole, queryByRole } = render(<AutoComplete />, {});
+    const { getByTestId, getByRole, queryByRole } = render(<AutoComplete />);
 
-    // const autoCompleteSearch = getByTestId("ant-select-auto-complete");
-
+    // const input = getByRole("textbox")
     // console.log(AutoCompleteSearch, "AutoCompleteSearch")
     // screen.debug()
     // const Input = globalGetByRole(AutoCompleteSearch, "textbox");
 
-    // expect(queryByRole("listbox")).toBeNull();
+    expect(queryByRole("listbox")).toBeNull();
 
     // fireEvent.mouseDown(Input);
     // const ListBox = getByRole("listbox");
@@ -30,6 +38,7 @@ describe("AutoComplete", () => {
     // expect(ListBoxAfter).toBeDefined();
     // const menuItem2 = globalGetByText(ListBoxAfter, top100Films[1].title);
     // fireEvent.click(menuItem2);
-    // expect(queryByRole("listbox")).toBeNull();
+    // expect(queryByRole("listbox")).toBeNull();]
+    // screen.debug();
   });
 });
