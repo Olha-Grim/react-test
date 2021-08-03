@@ -48,9 +48,6 @@ describe("Card", () => {
     expect(avatar).toBeInTheDocument();
 
     const buttonSetting = getByLabelText("setting");
-    // .img.node.prop.alt("setting");
-    // console.log(Object.keys(buttonSetting), "setting");
-
     const buttonEdit = getByLabelText("edit");
     userEvent.click(buttonSetting);
     userEvent.click(buttonEdit);
