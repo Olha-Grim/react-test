@@ -1,13 +1,12 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Tree from ".";
+import { Tree } from ".";
 
 describe("Tree", () => {
   test("interaction with Tree component", () => {
-    const { container } = render(
+    const { asFragment } = render(
       <Tree className="draggable-tree" draggable blockNode />
     );
-    const tree = container.firstChild;
-    expect(tree).toBeInTheDocument();
+    expect(asFragment(<Tree className="draggable-tree"/>)).toMatchSnapshot();
   });
 });

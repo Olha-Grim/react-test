@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import { DatePicker, RangePicker } from ".";
 import { Space } from "..";
 
-describe("Callapse", () => {
+describe("DatePicker", () => {
   window.matchMedia =
     window.matchMedia ||
     function () {

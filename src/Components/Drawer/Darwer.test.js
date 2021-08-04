@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import Drawer from ".";
 import Button from "../Button";
 
-describe("Callapse", () => {
+describe("Drawer", () => {
   window.matchMedia =
     window.matchMedia ||
     function () {

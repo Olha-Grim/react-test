@@ -1,8 +1,9 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { Dropdown } from ".";
+import { TimePicker } from "..";
+import moment from "moment";
 
-describe("Dropdown", () => {
+describe("TimePicker", () => {
   window.matchMedia =
     window.matchMedia ||
     function () {
@@ -13,16 +14,12 @@ describe("Dropdown", () => {
       };
     };
   test("renders without crashing", () => {
-    const preventDefault = jest.fn();
-
+    const onChange = jest.fn();
     const { container } = render(
-      <>
-        <Dropdown overlay={<p>Hi</p>}>
-          <a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
-            Hover me
-          </a>
-        </Dropdown>
-      </>
+      <TimePicker
+        onChange={onChange}
+        defaultOpenValue={moment("00:00:00", "HH:mm:ss")}
+      />
     );
 
     expect(container.firstChild).toBeInTheDocument();

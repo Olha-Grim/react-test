@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import { Row } from ".";
 import Col from "./Col";
 
-describe("Empty", () => {
+describe("Grid", () => {
   window.matchMedia =
     window.matchMedia ||
     function () {
@@ -13,7 +13,7 @@ describe("Empty", () => {
         removeListener: function () {},
       };
     };
-  test("interaction with Empty component", () => {
+  test("interaction with Grid component", () => {
     const { container } = render(
       <Row gutter={16}>
         <Col className="gutter-row" span={6}>

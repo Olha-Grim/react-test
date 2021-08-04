@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tree interaction with Tree component 1`] = `
+<DocumentFragment>
+  <div
+    class="ant-tree ant-tree-icon-hide ant-tree-block-node"
+  >
+    <div
+      role="tree"
+    >
+      <input
+        style="width: 0px; height: 0px; display: flex; overflow: hidden; opacity: 0; border: 0px; padding: 0px; margin: 0px;"
+        tabindex="0"
+        value=""
+      />
+    </div>
+    <div
+      aria-hidden="true"
+      class="ant-tree-treenode"
+      style="position: absolute; pointer-events: none; visibility: hidden; height: 0px; overflow: hidden;"
+    >
+      <div
+        class="ant-tree-indent"
+      >
+        <div
+          class="ant-tree-indent-unit"
+        />
+      </div>
+    </div>
+    <div
+      class="ant-tree-list"
+      style="position: relative;"
+    >
+      <div
+        class="ant-tree-list-holder"
+      >
+        <div>
+          <div
+            class="ant-tree-list-holder-inner"
+            style="display: flex; flex-direction: column;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
