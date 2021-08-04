@@ -6,5 +6,5 @@ describe("Pagination", () => {
   test("interaction with Pagination component", () => {
     const { asFragment } = render(<Pagination defaultCurrent={1} total={50}/>);
     expect(asFragment(<Pagination />)).toMatchSnapshot();
-  });
+
 });

@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import Button from ".";
 
 describe("Button", () => {
-  test("interaction with input", () => {
+  test("interaction with Button", () => {
     const { getByRole } = render(<Button />);
     const button = getByRole("button");
     expect(button).not.toHaveFocus();

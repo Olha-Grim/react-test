@@ -1,17 +1,29 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { Layout, Content, Footer, Header } from ".";
+import { List, ListItem } from ".";
 
 describe("Layout", () => {
+  window.matchMedia =
+    window.matchMedia ||
+    function () {
+      return {
+        matches: false,
+        addListener: function () {},
+        removeListener: function () {},
+      };
+    };
   test("interaction with Layout component", () => {
     const { container } = render(
-      <Layout>
-        <Header>Header</Header>
-        <Content>Content</Content>
-        <Footer>Footer</Footer>
-      </Layout>
+      <List
+        size="large"
+        header={<div>Header</div>}
+        footer={<div>Footer</div>}
+        bordered
+        dataSource={"Los Angeles battles huge wildfires."}
+        renderItem={(item) => <ListItem>{item}</ListItem>}
+      />
     );
-    const input = container.firstChild;
-    expect(input).toBeInTheDocument();
+    const component = container.firstChild;
+    expect(component).toBeInTheDocument();
   });
 });

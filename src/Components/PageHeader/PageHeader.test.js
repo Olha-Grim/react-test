@@ -1,9 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { DatePicker, RangePicker } from ".";
-import { Space } from "..";
+import PageHeader from ".";
 
-describe("DatePicker", () => {
+describe("PageHeader", () => {
   window.matchMedia =
     window.matchMedia ||
     function () {
@@ -14,11 +13,15 @@ describe("DatePicker", () => {
       };
     };
   test("renders without crashing", () => {
-    const onChange = jest.fn();
-    const onOk = jest.fn();
-
     const { container } = render(
-      <DatePicker showTime onChange={onChange} onOk={onOk} />
+      <>
+        <PageHeader
+          className="site-page-header"
+          onBack={() => null}
+          title="Title"
+          subTitle="This is a subtitle"
+        />
+      </>
     );
 
     expect(container.firstChild).toBeInTheDocument();

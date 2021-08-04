@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { UserOutlined } from "@ant-design/icons";
-import Avatar from ".";
+import Avatar from "./Avatar";
 
 describe("Avatar", () => {
   window.matchMedia =
@@ -17,7 +17,6 @@ describe("Avatar", () => {
     const { container } = render(
       <Avatar size="large" icon={<UserOutlined />} />
     );
-    const avatar = container.firstChild;
-    expect(avatar).toBeInTheDocument();
+    expect(container.firstChild).toBeInTheDocument();
   });
 });
