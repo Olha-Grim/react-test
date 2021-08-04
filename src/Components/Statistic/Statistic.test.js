@@ -5,7 +5,7 @@ import { Col, Row } from "../Grid";
 import { Card } from "../Card";
 import { Statistic } from ".";
 
-describe("Steps", () => {
+describe("Statistic", () => {
   window.matchMedia =
     window.matchMedia ||
     function () {
@@ -15,7 +15,7 @@ describe("Steps", () => {
         removeListener: function () {},
       };
     };
-  test("interaction with Steps component", () => {
+  test("interaction with Statistic component", () => {
     const { container } = render(
       <div className="site-statistic-demo-card">
         <Row gutter={16}>

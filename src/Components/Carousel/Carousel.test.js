@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import Carousel from ".";
 
-describe("Card", () => {
+describe("Carousel", () => {
   window.matchMedia =
     window.matchMedia ||
     function () {
