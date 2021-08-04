@@ -2,10 +2,12 @@ import React from "react";
 import { render } from "@testing-library/react";
 import Tree from ".";
 
-describe("Space", () => {
-  test("interaction with Space component", () => {
-    const { container } = render(<Space>Space</Space>);
-    const space = container.firstChild;
-    expect(space).toBeInTheDocument();
+describe("Tree", () => {
+  test("interaction with Tree component", () => {
+    const { container } = render(
+      <Tree className="draggable-tree" draggable blockNode />
+    );
+    const tree = container.firstChild;
+    expect(tree).toBeInTheDocument();
   });
 });
