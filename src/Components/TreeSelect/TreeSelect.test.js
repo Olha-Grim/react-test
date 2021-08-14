@@ -27,6 +27,7 @@ describe("TreeSelect", () => {
         treeDefaultExpandAll
         onChange={onChange}
       >
+        
         <TreeNode value="parent 1" title="parent 1">
           <TreeNode value="parent 1-0" title="parent 1-0">
             <TreeNode value="leaf1" title="leaf1" />

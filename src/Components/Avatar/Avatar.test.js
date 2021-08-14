@@ -17,6 +17,7 @@ describe("Avatar", () => {
     const { container } = render(
       <Avatar size="large" icon={<UserOutlined />} />
     );
+
     expect(container.firstChild).toBeInTheDocument();
   });
 });
